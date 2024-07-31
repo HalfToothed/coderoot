@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "leetcode-clone-app": {
+    "coderoot": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/leetcode-clone-app",
+            "outputPath": "dist/coderoot",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "leetcode-clone-app:build:production"
+              "buildTarget": "coderoot:build:production"
             },
             "development": {
-              "buildTarget": "leetcode-clone-app:build:development"
+              "buildTarget": "coderoot:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,6 +86,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "c24622f5-0906-4254-a3e8-ac2f6feb599b"
+    "analytics": "87adfade-ae00-4111-8a1d-2e2d43e4dad7"
   }
 }
