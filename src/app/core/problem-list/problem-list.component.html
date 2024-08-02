@@ -1,16 +1,39 @@
 <div class="container">
   <ul class="responsive-table">
+    <li class="section">
+      <div class="sec col-1">
+        <input type="text" id="searchBox" placeholder="Search..." />
+      </div>
+      <div class="sec col-3">
+        <select id="topicDropdown">
+          <option value="">Select Topic</option>
+          <option value="math">Math</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+        </select>
+      </div>
+      <div class="sec col-4">
+        <select id="difficultyDropdown">
+          <option value="">Select Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </li>
+    
+    
     <li class="table-header">
       <div class="col col-1">Status</div>
       <div class="col col-2">Problem</div>
       <div class="col col-3">Difficulty</div>
       <div class="col col-4">Acceptance</div>
     </li>
-    <li class="table-row">
-      <div class="col col-1" data-label="Status">true</div>
-      <div class="col col-2" data-label="Problem">Two Sum</div>
-      <div class="col col-3" data-label="Difficulty">Easy</div>
-      <div class="col col-4" data-label="Acceptance">95%</div>
+    <li class="table-row" *ngFor="let problem of problemList">
+      <div class="col col-1" data-label="Status">{{problem.status}}</div>
+      <div class="col col-2" data-label="Problem">{{problem.title}}</div>
+      <div class="col col-3" data-label="Difficulty">{{problem.difficulty}}</div>
+      <div class="col col-4" data-label="Acceptance">{{problem.acceptance}}%</div>
     </li>
   </ul>
 </div>
